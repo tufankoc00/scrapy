@@ -20,5 +20,5 @@ steps:
   displayName: 'Use Python $(python.version)'
 - script: |
     pip install -U tox twine wheel codecov
-    tox
+    tox -- tests/test_utils_trackref.py::TrackrefTestCase::test_get_oldest
   displayName: 'Run test suite'
